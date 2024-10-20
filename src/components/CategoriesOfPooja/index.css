@@ -1,0 +1,82 @@
+.top-category-container{
+    padding: 14px 15px 30px 15px;
+}
+.category-pooja-container{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+}
+.category-pooja-heading{
+font-family: "Lora";
+font-size: 48px;
+font-weight: 600;
+color: #1E1E1E;
+text-align: center;
+}
+.categories-list-items{
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.category-Card-container{
+width: 495px;
+height: 195px;
+border-radius: 20px;
+border: 1px solid #CECFD2;
+background-color: #FFFFFF;
+padding: 30px;
+display:flex;
+align-items: center;
+margin-bottom: 20px;
+margin-right: 20px;
+}
+.pooja-img{
+width: 204.28px;
+height: 157.77px;
+border-radius: 20px;
+
+
+}
+.catergory-description-container{
+    
+    margin-left: 20px;
+    
+}
+.category-name{
+font-family:"Poppins";
+font-weight: 700;
+font-size: 18px;
+color: #313642;
+}
+.local-name{
+font-family: "Poppins";
+font-size: 15px;
+font-weight: 700;
+}
+
+.category-description{
+font-family: Poppins;
+font-size: 14px;
+font-weight: 400;
+color: #000000;
+margin-top: 20px;
+
+}
+
+.active-category{
+    border: 2px solid #FF7800;
+}
+.next-button{
+    width:538px;
+height:43px;
+border-radius:12px;
+background-color: #E31A1A;
+border: 1px solid #E31A1A;
+color: #FFFFFF;
+font-weight: 400;
+font-size: 20px;
+}

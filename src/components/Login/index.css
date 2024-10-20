@@ -1,0 +1,128 @@
+.bg-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+.bg-left-container{
+    background-image:url("https://s3-alpha-sig.figma.com/img/9263/7f09/85a06cb9bd0b962f4c2c5fd0d86bf79f?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SoIKhpQO1FHAOpqHB9ONxisqsu77JJgSPPKh9oBbPBH3LLBPt-5cdQ0pbdIww4y9uOwfdEeJavsZO2i~GvRGenAVjZCJFqs-c2gQg4cFyr0oMhBNsPcEI-7uERz4JIp~XfrkaVbV4vk0Sxf1DJwCwAmUcm7v4sTMSYjZK1j-cvZG-8eycjoSQlh5e3XOJ64mtGdGwhOiUZ5uf6~aPMpI4ncsC0T7NozfaumeVO8GB6w9gu0-A9S-ub2MGaafIgUJobRN4gfLL8akuW-flq16bx86N~gfcve1j9Lnm5D88-OWCcfZDg-ptBxw1jHdih4twangfy6h09tUuobmKjHTxw__");
+    background-size: cover;
+    width: 779px;
+    height: 100vh;
+}
+
+.bg-right-container{
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    align-items: flex-start;
+}
+.bg-login-container{
+    background-color:rgba(255,255,255,0.8);
+    width:100%;
+    height:100%;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+.header-component{
+    position:fixed;
+    top: 14px;
+    left: 15px;
+    right: 15px;
+}
+
+.login-title{
+    font-family: "Lora";
+    font-size: 64px;
+    font-weight: 700;
+    text-align: left;
+    color:  #1E1E1E;
+
+}
+.labelName{
+    font-family: "Poppins";
+    font-size: 24px;
+    font-weight: 400;
+    text-align: left;
+    color: #313642;
+    margin-bottom: 10px;
+}
+.custom-input{
+    background-color: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    font-family:"Poppins";
+    font-size:20px;
+    font-weight: 400;
+    line-height: 16px;
+    color:#B3B3B3;
+    height: 40px;
+    border-radius: 12px;
+    padding-left: 10px;
+
+
+}
+.custom-button{
+    width:426px;
+    height:40px;
+    border-radius:10px;
+    outline: none;
+    background-color: #DB2C1D;
+    border: 1px solid #E31A1A;
+    color: #FFFFFF;
+    font-family:"Poppins";
+    font-size:20px;
+    font-weight: 400;
+    margin-top: 40px;
+
+
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    width: 426px;
+}
+
+.bg-bottom-container{
+    background-image:url("https://s3-alpha-sig.figma.com/img/8995/10f6/5efd349079a91edc875a4766c9f16ae8?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Fd-UHyBxHgKqTau-cGaCiGmHdXN8ulsa3Q1NzLPOiFEzWS-vae-99Ntu4PU~TvpqIX5ac4kBU5gFRyT~gQeaKclTP1dXk4KMmQAbUbrs56cZFNSeMW2to9lx8XJuUjAkkUpxQGL42J0mWPgmtdUIZgSmllQI3fb~VL5VkO9TMlzoGgGps-Z~a4rUN3TGIlIfTFZGBV99t4XKODMrcXWEJgoKQRxernto1FKh36-df4ecm5XkGDPZViBrIfPaz1cFxEOPQjDIKNYSyJ8HIGBLBakYhtt9WDucy4tC~BSAJ7SM1K09xZVvxOoylLKvyc~JbepN2ottFixRytIsjaJJgw__");
+    height: 300px;
+    width: 820px;
+    background-size: cover;
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-end;
+
+}
+.pandit-img{
+width: 496px;
+height: 426px;
+align-self: flex-end;
+
+
+}
+.text-container{
+    margin-left: 10px;
+
+}
+.content{
+    font-family: Yatra One;
+    font-weight: 400;
+    font-size: 48px;
+    color: #313642;
+}
+.content-span{
+font-family: Yatra One;
+font-size: 48px;
+font-weight: 400;
+color: #E0422F;
+}
+.error-msg{
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 400;
+    color: #FF0000;
+    margin-top: 10px;
+}

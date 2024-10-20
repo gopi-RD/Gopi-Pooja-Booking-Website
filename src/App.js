@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+import {useState} from "react"
+import { BrowserRouter,Route,Switch } from 'react-router-dom';
+import Login from "./components/Login"
+import Service from "./components/Service"
+import CategoriesOfPooja from "./components/CategoriesOfPooja"
+import ProtectedRoute from "./components/ProtectedRoute"
+import PoojaContext from './context/PoojaContext';
+
 import './App.css';
+import ProfileDetails from "./components/ProfileDetails";
+
 
 function App() {
+  const [activeId,setActiveId] = useState(null);
+  const updateActiveId=(id)=>{
+    setActiveId(id);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PoojaContext.Provider value={{activeId,updateActiveId}}>
+    <BrowserRouter>
+    <Switch>
+      <Route exact path="/login" component={Login} />
+      <ProtectedRoute exact path="/profile-details" component={ProfileDetails} />
+      <ProtectedRoute exact path="/service" component={Service} />
+      <ProtectedRoute exact path="/categories" component={CategoriesOfPooja} />
+    </Switch>
+    </BrowserRouter>
+    </PoojaContext.Provider>
+    
   );
 }
 
