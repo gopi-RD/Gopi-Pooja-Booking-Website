@@ -2,10 +2,13 @@ import { useState,useEffect } from "react"
 import Cookies from "js-cookie"
 import Header from "../Header"
 import PoojaContext  from "../../context/PoojaContext"
+import Loader from "react-loader-spinner"
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 import "./index.css"
 const CategoriesOfPooja=(props)=>{
     const [categoriesList,setCategoriesList]=useState([])
     const [activeCatgory,setActiveCatgory]=useState(null)
+    const [loading,setLoading]=useState(true)
 
     useEffect(()=>{
 
@@ -65,7 +68,9 @@ const CategoriesOfPooja=(props)=>{
                         <div className="category-pooja-container">
                             <h1 className="category-pooja-heading"> Categories of Pooja</h1>
                             <ul className="categories-list-items">
-                                {
+                                {  loading? (<div className="loader-container">
+                                        <Loader type="FiveDots" height={100} widt={100} color="#000000"/>
+                                </div> ): (
                                     categoriesList.map(category=>(
                                         <li className={`category-Card-container ${category.isSelect && "active-category"}`} key={category.id} onClick={()=>onSelectCatgoryItem(category.id)} >
                                                 <img src="https://s3-alpha-sig.figma.com/img/f9d3/d97a/9ce99316ef414376f3014b3de31e162b?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RReaZUti34qOqzHmwZOzYzzA6gJ6SUdrhkujGwYYxy0xp5n3yS~dpBjSXTcDhFD38mwPjYfj6RSbwPlDdh7ZdgnkALpli3yYgZCJCzCbwgH0mpptaUG1KpygIK3Hr6dDy69tKGzjGUajRKfr0MPkB3eUaTq8eMDY5~ogbcWcVwhQBbuFauDQ3vG94~AHK8nntJ9KJ8DXWCDZ~yqtew37iJ1lzjbbMd15enB6R7By~mqLQp8dDuHT85Vsrk2yTfE7bFpBUr~8LisueReh7yw4p~vb~tRIJ1PYkA56a5RAdTBBG-ANw-W24Neyb4yaSY4zM0n3~PfPusr2WLgpUUHEBg__" className="pooja-img" alt="category Pooja" />
@@ -81,7 +86,7 @@ const CategoriesOfPooja=(props)=>{
                                             </div>
 
                                         </li>
-                                    ))
+                                    )) )
                                 }
                             </ul>
                             <button className="next-button" onClick={onChangeService}>
